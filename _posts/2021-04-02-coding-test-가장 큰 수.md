@@ -74,3 +74,4 @@ string을 int로 변환 후 다시 string으로 변환
 join만 사용할 경우, [0,0,0,0]이 input되면 '0000'이 return됨.  
 이를 int로 변환해 '0'으로 바꾼 후, 지문에서 제시한대로 overflow 방지를 위해 str으로 변환.
 
+
