@@ -1,6 +1,5 @@
 header:
   - titles: 
-    # @start locale config'Home'
       # @start locale config
       en      : &EN       Home
       en-GB   : *EN
@@ -14,7 +13,7 @@ header:
       zh-Hant : *EN
       zh-TW   : *EN
       zh-HK   : *EN
-      ko      : &KO       홉
+      ko      : &KO       홈
       ko-KR   : *KO
       fr      : &FR       Home
       fr-BE   : *FR
@@ -51,7 +50,51 @@ header:
     url: /archive.html
 
   - titles: 'About'
+      # @start locale config
+      en      : &EN       About
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : *EN
+      zh      : *EN
+      zh-CN   : *EN
+      zh-SG   : *EN
+      zh-Hant : *EN
+      zh-TW   : *EN
+      zh-HK   : *EN
+      ko      : &KO       소개
+      ko-KR   : *KO
+      fr      : &FR       About
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
     url: /about.html
     
-  - titles: 'GitHub'
+  - titles: 
+      # @start locale config
+      en      : &EN       GitHub
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : *EN
+      zh      : *EN
+      zh-CN   : *EN
+      zh-SG   : *EN
+      zh-Hant : *EN
+      zh-TW   : *EN
+      zh-HK   : *EN
+      ko      : &KO       GitHub
+      ko-KR   : *KO
+      fr      : &FR       GitHub
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
     url: https://github.com/dw3624/dw3624.github.io
