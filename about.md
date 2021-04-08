@@ -7,8 +7,8 @@ key: page-about
 ## About me
 
 * Name : 강동원
-* E-mail: dw3624@gmail.com
-* github: https://github.com/dw3624
+* E-mail: [dw3624@gmail.com](dw3624@gmail.com)
+* github: [https://github.com/dw3624](https://github.com/dw3624)
 * skills: Python, R
 * langauge: Korean, Japanese, English
 

@@ -1,12 +1,28 @@
 ---
-title: 
-tags: 
+title: 백준 문제 - Python 배우기 2163
+tags: 백준 automata python
 ---
 
-## 
+## 2163번 [초콜릿 자르기](https://www.acmicpc.net/problem/2163)  
+
+문제:  
+정화는 N×M 크기의 초콜릿을 하나 가지고 있다. 초콜릿은 금이 가 있는 모양을 하고 있으며, 그 금에 의해 N×M개의 조각으로 나눠질 수 있다.
+
+입력:  
+첫째 줄에 두 정수 N, M(1≤N, M≤300)이 주어진다.
+
+출력:  
+첫째 줄에 답을 출력한다.
 
 
-## Code:  
+### Code:  
 ```python
 
 ```
+    2 2
+    3
+
+---
+
+### 출처: [백준 문제](https://www.acmicpc.net/workbook/view/459)
+
