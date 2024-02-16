@@ -38,6 +38,7 @@ const PostSlugPage = async ({
 			<MDXRemote
 				source={body}
 				components={mdxComponents}
+				// @ts-ignore
 				options={mdxOptions}
 			/>
 		</div>
