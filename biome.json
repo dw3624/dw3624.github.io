@@ -17,7 +17,8 @@
 		"rules": {
 			"all": true,
 			"suspicious": { "noArrayIndexKey": "off" },
-			"nursery": { "noNodejsModules": "off" }
+			"nursery": { "noNodejsModules": "off" },
+			"style": { "noDefaultExport": "off" }
 		}
 	},
 	"overrides": [
