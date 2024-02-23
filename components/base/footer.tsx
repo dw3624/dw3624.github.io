@@ -2,12 +2,11 @@
 
 import { Button } from '@/components/ui/button'
 import { Monitor, Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import React from 'react'
 
 const Footer = () => {
-	const toggle = () => {
-		document.documentElement.classList.toggle('dark')
-	}
+	const { theme, setTheme } = useTheme()
 
 	return (
 		<footer className="container max-w-3xl">
@@ -16,13 +15,34 @@ const Footer = () => {
 					© dw3624
 				</span>
 				<div className="border">
-					<Button variant="ghost" size="iconSm" onClick={() => toggle()}>
+					<Button
+						variant="ghost"
+						size="iconSm"
+						onClick={() => setTheme('light')}
+						className={
+							theme === 'light' ? 'bg-accent text-accent-foreground' : ''
+						}
+					>
 						<Sun size={16} />
 					</Button>
-					<Button variant="ghost" size="iconSm" onClick={() => toggle()}>
+					<Button
+						variant="ghost"
+						size="iconSm"
+						onClick={() => setTheme('system')}
+						className={
+							theme === 'system' ? 'bg-accent text-accent-foreground' : ''
+						}
+					>
 						<Monitor size={16} />
 					</Button>
-					<Button variant="ghost" size="iconSm" onClick={() => toggle()}>
+					<Button
+						variant="ghost"
+						size="iconSm"
+						onClick={() => setTheme('dark')}
+						className={
+							theme === 'dark' ? 'bg-accent text-accent-foreground' : ''
+						}
+					>
 						<Moon size={16} />
 					</Button>
 				</div>
