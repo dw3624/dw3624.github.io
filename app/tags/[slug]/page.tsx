@@ -3,7 +3,7 @@ import React from 'react'
 import PostCard from '@/components/ui/post-card'
 import { getPostList } from '@/lib/post'
 
-const PostsPage = () => {
+const TagPostsPage = () => {
 	const posts = getPostList()
 
 	return (
@@ -21,4 +21,4 @@ const PostsPage = () => {
 	)
 }
 
-export default PostsPage
+export default TagPostsPage
