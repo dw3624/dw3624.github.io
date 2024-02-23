@@ -27,9 +27,9 @@ const Header = () => {
 						href="/"
 						className="inline-flex items-center justify-center text-primary"
 					>
-						<MoonStar size={24} />
+						<MoonStar size={20} />
 						<span className="inline-flex center h-full ml-2 font-bold">
-							title
+							BLOG
 						</span>
 					</Link>
 					<nav className="flex gap-6">
