@@ -1,5 +1,6 @@
 import Footer from '@/components/base/footer'
 import Header from '@/components/base/header'
+import { ThemeProvider } from '@/components/base/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import * as React from 'react'
@@ -20,13 +21,15 @@ export default function RootLayout({
 	return (
 		<html lang="ko">
 			<body className={inter.className}>
-				<div className="flex flex-col h-[100dvh]">
-					<Header />
-					<main className="flex-1 container max-w-3xl">
-						<div className="py-6 h-full">{children}</div>
-					</main>
-					<Footer />
-				</div>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<div className="flex flex-col h-[100dvh]">
+						<Header />
+						<main className="flex-1 container max-w-3xl">
+							<div className="py-6 h-full">{children}</div>
+						</main>
+						<Footer />
+					</div>
+				</ThemeProvider>
 			</body>
 		</html>
 	)

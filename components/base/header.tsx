@@ -1,6 +1,5 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { MoonStar } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -20,10 +19,6 @@ const NavMenu = ({
 }
 
 const Header = () => {
-	const toggle = () => {
-		document.documentElement.classList.toggle('dark')
-	}
-
 	return (
 		<header className="container max-w-3xl">
 			<div className="flex items-center justify-between h-16">
@@ -42,9 +37,7 @@ const Header = () => {
 					</nav>
 				</div>
 				<nav>
-					<Button variant="ghost" size="icon" onClick={() => toggle()}>
-						<MoonStar size={16} />
-					</Button>
+					<div>Hi.</div>
 				</nav>
 			</div>
 		</header>
