@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-export const getAllTags = () => {
+export const getTagList = () => {
 	const postsDirectory = path.join(process.cwd(), 'posts')
 	const filenames = fs.readdirSync(postsDirectory)
 
@@ -28,7 +28,7 @@ export const getAllTags = () => {
 	return tagList
 }
 
-export const getTagPosts = (tag: string) => {
+export const getTagPostList = (tag: string) => {
 	const postsDirectory = path.join(process.cwd(), 'posts')
 	const filenames = fs.readdirSync(postsDirectory)
 

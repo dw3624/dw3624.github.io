@@ -1,10 +1,10 @@
 import { badgeVariants } from '@/components/ui/badge'
-import { getAllTags } from '@/lib/tag'
+import { getTagList } from '@/lib/tag'
 import Link from 'next/link'
 import * as React from 'react'
 
 const PostsPage = () => {
-	const tags = getAllTags()
+	const tags = getTagList()
 	console.log(tags)
 
 	return (

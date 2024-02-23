@@ -1,10 +1,9 @@
+import PostCard from '@/components/ui/post-card'
+import { getTagPostList } from '@/lib/tag'
 import React from 'react'
 
-import PostCard from '@/components/ui/post-card'
-import { getPostList } from '@/lib/post'
-
-const TagPostsPage = () => {
-	const posts = getPostList()
+const TagPostsPage = async ({ params }: { params: { slug: string } }) => {
+	const posts = await getTagPostList(params.slug)
 
 	return (
 		<section>
