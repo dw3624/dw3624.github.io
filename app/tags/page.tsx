@@ -5,7 +5,6 @@ import * as React from 'react'
 
 const PostsPage = () => {
 	const tags = getTagList()
-	console.log(tags)
 
 	return (
 		<section>

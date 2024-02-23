@@ -4,6 +4,8 @@ import { NavButton } from '@/components/ui/nav-button'
 import PostCard from '@/components/ui/post-card'
 import { getPostList } from '@/lib/post'
 
+export const dynamic = 'force-static'
+
 const PostsPage = ({
 	searchParams,
 }: {
