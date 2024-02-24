@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<main className="flex items-center justify-center h-full w-full">
 			<Button asChild>
-				<Link href="/posts">Go!</Link>
+				<Link href="/posts/pages/1">Go!</Link>
 			</Button>
 		</main>
 	)

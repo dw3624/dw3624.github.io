@@ -9,7 +9,7 @@ const PostsPage = () => {
 	return (
 		<section>
 			<header>
-				<h1 className="text-4xl font-bold lg:text-5xl">Posts</h1>
+				<h1 className="text-4xl font-bold lg:text-5xl">Tags</h1>
 			</header>
 			<hr className="my-3 md:my-4" />
 			<div className="flex flex-wrap gap-2">
