@@ -21,7 +21,7 @@ const PostCard = ({ post }: PostCardType) => {
 			</time>
 			<h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
 				<Link
-					href={`posts/${post.slug}`}
+					href={`/posts/${post.slug}`}
 					className=" transition-colors hover:text-primary/80"
 				>
 					{post.frontMatter.title}

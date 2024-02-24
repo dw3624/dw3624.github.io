@@ -16,32 +16,23 @@ const Footer = () => {
 				</span>
 				<div className="border">
 					<Button
-						variant="ghost"
+						variant={theme === 'light' ? 'secondary' : 'ghost'}
 						size="iconSm"
 						onClick={() => setTheme('light')}
-						className={
-							theme === 'light' ? 'bg-accent text-accent-foreground' : ''
-						}
 					>
 						<Sun size={16} />
 					</Button>
 					<Button
-						variant="ghost"
+						variant={theme === 'system' ? 'secondary' : 'ghost'}
 						size="iconSm"
 						onClick={() => setTheme('system')}
-						className={
-							theme === 'system' ? 'bg-accent text-accent-foreground' : ''
-						}
 					>
 						<Monitor size={16} />
 					</Button>
 					<Button
-						variant="ghost"
+						variant={theme === 'dark' ? 'secondary' : 'ghost'}
 						size="iconSm"
 						onClick={() => setTheme('dark')}
-						className={
-							theme === 'dark' ? 'bg-accent text-accent-foreground' : ''
-						}
 					>
 						<Moon size={16} />
 					</Button>

@@ -2,6 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+export const getPostNum = () => {
+	const postsDirectory = path.join(process.cwd(), 'posts')
+	const filenames = fs.readdirSync(postsDirectory)
+	return filenames.length
+}
+
 export const getPostList = () => {
 	const postsDirectory = path.join(process.cwd(), 'posts')
 	const filenames = fs.readdirSync(postsDirectory)

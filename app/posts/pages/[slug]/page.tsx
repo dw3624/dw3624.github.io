@@ -2,9 +2,15 @@ import React from 'react'
 
 import { NavButton } from '@/components/ui/nav-button'
 import PostCard from '@/components/ui/post-card'
-import { getPostList } from '@/lib/post'
+import { getPostList, getPostNum } from '@/lib/post'
 
-export const dynamic = 'force-static'
+const MAX_POST_NUM = 2
+
+export const generateStaticParams = () => {
+	const postNum = getPostNum()
+	const maxPage = Math.ceil(postNum / MAX_POST_NUM)
+	return Array.from({ length: maxPage }, (_, i) => ({ slug: `${i + 1}` }))
+}
 
 const PostsPage = ({
 	params,
@@ -14,10 +20,10 @@ const PostsPage = ({
 	}
 }) => {
 	const posts = getPostList()
+	console.log(posts)
 
-	const currentPage = Number(params.slug) || 1
-	const maxPostNum = 2
-	const maxPage = Math.ceil(posts.length / maxPostNum)
+	const currentPage = Number(params.slug)
+	const maxPage = Math.ceil(posts.length / MAX_POST_NUM)
 	const prevPage = currentPage - 1 > 0 ? currentPage - 1 : null
 	const nextPage = currentPage + 1 > maxPage ? null : currentPage + 1
 
@@ -30,7 +36,7 @@ const PostsPage = ({
 				<hr className="my-3 md:my-4" />
 				<div className="grid gap-8 flex-1">
 					{posts
-						.slice(maxPostNum * (currentPage - 1), maxPostNum * currentPage)
+						.slice(MAX_POST_NUM * (currentPage - 1), MAX_POST_NUM * currentPage)
 						.map((post, i) => (
 							<PostCard key={i} post={post} />
 						))}
