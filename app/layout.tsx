@@ -1,9 +1,11 @@
+import * as React from 'react'
+
 import Footer from '@/components/base/footer'
 import Header from '@/components/base/header'
 import { ThemeProvider } from '@/components/base/theme-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import * as React from 'react'
+
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,9 +21,14 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="ko">
+		<html lang="ko" suppressHydrationWarning>
 			<body className={inter.className}>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
 					<div className="flex flex-col h-[100dvh]">
 						<Header />
 						<main className="flex-1 container max-w-3xl">

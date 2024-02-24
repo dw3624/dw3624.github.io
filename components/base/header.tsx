@@ -11,7 +11,7 @@ const NavMenu = ({
 	return (
 		<Link
 			href={href}
-			className="inline-flex items-center justify-center text-foreground/60"
+			className="inline-flex items-center justify-center text-foreground/60 hover:text-foreground/80"
 		>
 			{children}
 		</Link>
@@ -25,7 +25,7 @@ const Header = () => {
 				<div className="flex gap-10 capitalize">
 					<Link
 						href="/"
-						className="inline-flex items-center justify-center text-primary"
+						className="inline-flex items-center justify-center text-primary hover:text-primary/80"
 					>
 						<MoonStar size={20} />
 						<span className="inline-flex center h-full ml-2 font-bold">
