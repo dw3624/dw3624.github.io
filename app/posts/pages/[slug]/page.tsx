@@ -2,9 +2,8 @@ import React from 'react'
 
 import { NavButton } from '@/components/ui/nav-button'
 import PostCard from '@/components/ui/post-card'
+import { MAX_POST_NUM } from '@/lib/config'
 import { getPostList, getPostNum } from '@/lib/post'
-
-const MAX_POST_NUM = 2
 
 export const generateStaticParams = () => {
 	const postNum = getPostNum()
@@ -12,15 +11,8 @@ export const generateStaticParams = () => {
 	return Array.from({ length: maxPage }, (_, i) => ({ slug: `${i + 1}` }))
 }
 
-const PostsPage = ({
-	params,
-}: {
-	params: {
-		slug: string
-	}
-}) => {
+const PostsPage = ({ params }: { params: { slug: string } }) => {
 	const posts = getPostList()
-	console.log(posts)
 
 	const currentPage = Number(params.slug)
 	const maxPage = Math.ceil(posts.length / MAX_POST_NUM)
