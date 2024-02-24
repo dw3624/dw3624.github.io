@@ -1,1 +1,1 @@
-export const MAX_POST_NUM = 2
+export const MAX_POST_NUM = 5
