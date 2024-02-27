@@ -23,9 +23,9 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
 		<section className="flex flex-col justify-between h-full">
 			<div>
 				<header>
-					<h1 className="text-4xl font-bold lg:text-5xl">Posts</h1>
+					<h1 className="text-4xl font-bold">Posts</h1>
 				</header>
-				<hr className="my-3 md:my-4" />
+				<hr className="mt-6 mb-4" />
 				<div className="grid gap-8 flex-1">
 					{posts
 						.slice(MAX_POST_NUM * (currentPage - 1), MAX_POST_NUM * currentPage)

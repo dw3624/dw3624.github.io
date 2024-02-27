@@ -13,11 +13,11 @@ const TagPostsPage = ({ params }: { params: { slug: string } }) => {
 	return (
 		<section>
 			<header>
-				<h1 className="text-4xl font-bold lg:text-5xl">
+				<h1 className="text-4xl font-bold">
 					Tag: <span className="text-primary">{params.slug}</span>
 				</h1>
 			</header>
-			<hr className="my-3 md:my-4" />
+			<hr className="mt-6 mb-4" />
 			<div className="grid gap-8">
 				{posts.map((post, i) => (
 					<PostCard key={i} post={post} />
