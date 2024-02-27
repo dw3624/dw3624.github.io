@@ -13,7 +13,9 @@ const TagPostsPage = ({ params }: { params: { slug: string } }) => {
 	return (
 		<section>
 			<header>
-				<h1 className="text-4xl font-bold lg:text-5xl">Tag: {params.slug}</h1>
+				<h1 className="text-4xl font-bold lg:text-5xl">
+					Tag: <span className="text-primary">{params.slug}</span>
+				</h1>
 			</header>
 			<hr className="my-3 md:my-4" />
 			<div className="grid gap-8">

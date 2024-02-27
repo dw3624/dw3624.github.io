@@ -25,6 +25,7 @@ const Footer = () => {
 							variant={theme === 'light' ? 'secondary' : 'ghost'}
 							size="iconSm"
 							onClick={() => setTheme('light')}
+							className={theme === 'light' ? 'text-primary' : ''}
 						>
 							<Sun size={16} />
 						</Button>
@@ -32,6 +33,7 @@ const Footer = () => {
 							variant={theme === 'system' ? 'secondary' : 'ghost'}
 							size="iconSm"
 							onClick={() => setTheme('system')}
+							className={theme === 'system' ? 'text-primary' : ''}
 						>
 							<Monitor size={16} />
 						</Button>
@@ -39,6 +41,7 @@ const Footer = () => {
 							variant={theme === 'dark' ? 'secondary' : 'ghost'}
 							size="iconSm"
 							onClick={() => setTheme('dark')}
+							className={theme === 'dark' ? 'text-primary' : ''}
 						>
 							<Moon size={16} />
 						</Button>

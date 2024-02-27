@@ -86,7 +86,10 @@ export const mdxComponents: MdxComponentsType = {
 	),
 	a: ({ className, ...props }) => (
 		<a
-			className={cn('font-medium underline underline-offset-4', className)}
+			className={cn(
+				'font-medium underline underline-offset-4 text-primary hover:text-primary/80',
+				className,
+			)}
 			{...props}
 		/>
 	),
@@ -164,7 +167,7 @@ export const mdxComponents: MdxComponentsType = {
 	code: ({ className, ...props }) => (
 		<code
 			className={cn(
-				'relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm',
+				'relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm bg-primary/20',
 				className,
 			)}
 			{...props}
