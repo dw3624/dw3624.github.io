@@ -25,7 +25,7 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
 				<header>
 					<h1 className="text-4xl font-bold">Posts</h1>
 				</header>
-				<hr className="mt-6 mb-4" />
+				<hr className="mt-6 mb-8" />
 				<div className="grid gap-8 flex-1">
 					{posts
 						.slice(MAX_POST_NUM * (currentPage - 1), MAX_POST_NUM * currentPage)

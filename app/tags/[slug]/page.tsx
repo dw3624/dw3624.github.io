@@ -17,7 +17,7 @@ const TagPostsPage = ({ params }: { params: { slug: string } }) => {
 					Tag: <span className="text-primary">{params.slug}</span>
 				</h1>
 			</header>
-			<hr className="mt-6 mb-4" />
+			<hr className="mt-6 mb-8" />
 			<div className="grid gap-8">
 				{posts.map((post, i) => (
 					<PostCard key={i} post={post} />

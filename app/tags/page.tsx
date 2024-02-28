@@ -11,7 +11,7 @@ const PostsPage = () => {
 			<header>
 				<h1 className="text-4xl font-bold">Tags</h1>
 			</header>
-			<hr className="mt-6 mb-4" />
+			<hr className="mt-6 mb-8" />
 			<div className="flex flex-wrap gap-2">
 				{tags.map((tag: { name: string; count: number }, i: number) => (
 					<Link
