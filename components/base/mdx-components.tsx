@@ -42,7 +42,7 @@ export const mdxComponents: MdxComponentsType = {
 	h2: ({ className, ...props }) => (
 		<h2
 			className={cn(
-				'mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0',
+				'mt-10 scroll-m-20 border-b pb-1 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0',
 				className,
 			)}
 			{...props}
@@ -51,7 +51,7 @@ export const mdxComponents: MdxComponentsType = {
 	h3: ({ className, ...props }) => (
 		<h3
 			className={cn(
-				'mt-8 scroll-m-20 text-2xl font-semibold tracking-tight',
+				'mt-8 scroll-m-20 text-xl md:text-2xl font-semibold tracking-tight',
 				className,
 			)}
 			{...props}
@@ -60,7 +60,7 @@ export const mdxComponents: MdxComponentsType = {
 	h4: ({ className, ...props }) => (
 		<h4
 			className={cn(
-				'mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
+				'mt-8 scroll-m-20 text-lg md:text-xl font-semibold tracking-tight',
 				className,
 			)}
 			{...props}
@@ -87,7 +87,7 @@ export const mdxComponents: MdxComponentsType = {
 	a: ({ className, ...props }) => (
 		<a
 			className={cn(
-				'font-medium underline underline-offset-4 text-primary hover:text-primary/80',
+				'font-medium hover:underline underline-offset-4 text-primary hover:text-primary/80',
 				className,
 			)}
 			{...props}
@@ -111,7 +111,7 @@ export const mdxComponents: MdxComponentsType = {
 	blockquote: ({ className, ...props }) => (
 		<blockquote
 			className={cn(
-				'mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground',
+				'mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground break-words',
 				className,
 			)}
 			{...props}

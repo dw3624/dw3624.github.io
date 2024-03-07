@@ -5,6 +5,7 @@ import * as React from 'react'
 import { Button } from '@/components/ui/button'
 import { Monitor, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 
 const Footer = () => {
 	const { theme, setTheme } = useTheme()
@@ -16,9 +17,11 @@ const Footer = () => {
 	return (
 		<footer className="container max-w-3xl">
 			<div className="h-20 flex justify-between items-center font-sm">
-				<span className="inline-flex items-center justify-center text-muted-foreground">
-					© dw3624
-				</span>
+				<Link href="https://github.com/dw3624" target="_blank">
+					<span className="inline-flex items-center justify-center text-muted-foreground hover:underline">
+						© dw3624
+					</span>
+				</Link>
 				{mounted && (
 					<div className="border">
 						<Button

@@ -1,24 +1,9 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Cookie, MoonStar } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
-
-const NavMenu = ({
-	href,
-	children,
-}: { href: string; children: React.ReactNode }) => {
-	return (
-		<Link
-			href={href}
-			className="inline-flex items-center justify-center text-foreground/60 hover:text-foreground/80"
-		>
-			{children}
-		</Link>
-	)
-}
 
 const Header = () => {
 	const pathname = usePathname()
@@ -29,19 +14,23 @@ const Header = () => {
 			active: pathname.startsWith('/posts'),
 		},
 		{ href: '/tags', label: 'Tags', active: pathname.startsWith('/tags') },
+		{
+			href: 'https://www.notion.so/69a26827954545ee94ba401f49b42ccb',
+			label: 'Resume',
+			active: false,
+		},
 	]
 
 	return (
 		<header className="container max-w-3xl">
 			<div className="flex items-center justify-between h-16">
-				<div className="flex gap-10 capitalize">
+				<div className="flex gap-8 capitalize">
 					<Link
 						href="/"
 						className="inline-flex items-center justify-center text-primary hover:text-primary/80"
 					>
-						<Cookie size={24} />
 						<span className="inline-flex items-center h-full ml-2 font-bold">
-							Blog
+							~/
 						</span>
 					</Link>
 					<nav className="flex gap-4">
@@ -49,6 +38,7 @@ const Header = () => {
 							<Link
 								key={i}
 								href={route.href}
+								target={route.href.startsWith('http') ? '_blank' : '_self'}
 								className={cn(
 									'inline-flex items-center justify-center font-semibold hover:text-foreground/80',
 									route.active ? 'text-foreground' : 'text-foreground/60',

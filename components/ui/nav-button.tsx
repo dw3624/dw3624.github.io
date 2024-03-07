@@ -24,7 +24,7 @@ export const NavButton = ({ variant, slug, text }: NavButtonType) => {
 					<span className="text-xs text-foreground">
 						{variant === 'prev' ? 'Previous' : 'Next'}
 					</span>
-					<span className="overflow-hidden">{text}</span>
+					<span className="truncate">{text}</span>
 				</div>
 				{variant === 'next' && <ChevronRight size={20} />}
 			</Link>

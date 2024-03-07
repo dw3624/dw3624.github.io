@@ -16,7 +16,7 @@ const PostCard = ({ post }: PostCardType) => {
 	return (
 		<article className="flex flex-col gap-2">
 			<div className="space-y-1">
-				<h3 className="text-2xl font-semibold tracking-tight">
+				<h3 className="text-lg md:text-xl font-semibold tracking-tight text-foreground">
 					<Link
 						href={`/posts/${post.slug}`}
 						className="transition-colors hover:text-primary/80"
@@ -25,7 +25,7 @@ const PostCard = ({ post }: PostCardType) => {
 					</Link>
 				</h3>
 				{post.frontMatter.description && (
-					<p className="text-secondary-foreground">
+					<p className="text-sm md:text-base text-foreground/80">
 						{post.frontMatter.description}
 					</p>
 				)}

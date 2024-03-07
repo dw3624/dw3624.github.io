@@ -47,11 +47,11 @@ const PostSlugPage = async ({
 					<time className="text-sm font-bold text-muted-foreground font-mono">
 						{date}
 					</time>
-					<h1 className="mt-2 text-4xl font-bold lg:text-5xl">
+					<h1 className="mt-2 text-3xl md:text-4xl font-bold lg:text-5xl">
 						{frontMatter.title}
 					</h1>
 					{post.frontMatter.description && (
-						<p className="mt-2 text-foreground/60">
+						<p className="mt-2 text-foreground/80">
 							{post.frontMatter.description}
 						</p>
 					)}
