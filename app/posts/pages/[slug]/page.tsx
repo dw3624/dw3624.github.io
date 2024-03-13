@@ -1,9 +1,10 @@
-import React from 'react'
-
-import { NavButton } from '@/components/ui/nav-button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import PostCard from '@/components/ui/post-card'
 import { MAX_POST_NUM } from '@/lib/config'
 import { getPostList, getPostNum } from '@/lib/post'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import React from 'react'
 
 export const generateStaticParams = () => {
 	const postNum = getPostNum()
@@ -23,7 +24,7 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
 		<section className="flex flex-col justify-between h-full">
 			<div>
 				<header>
-					<h1 className="text-3xl md:text-4xl font-bold">Posts</h1>
+					<h1 className="text-3xl md:text-4xl font-bold">{currentPage}</h1>
 				</header>
 				<hr className="mt-6 mb-6 md:mb-8" />
 				<div className="grid gap-6 md:gap-8 flex-1">
@@ -34,18 +35,27 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
 						))}
 				</div>
 			</div>
-			<nav className="w-full flex flex-col gap-2 mt-6 mx-auto 3xl:flex-row">
-				<NavButton
-					variant="prev"
-					slug={prevPage ? `/posts/pages/${currentPage - 1}` : ''}
-					text={`Page ${currentPage - 1}`}
-				/>
-				<NavButton
-					variant="next"
-					slug={nextPage ? `/posts/pages/${currentPage + 1}` : ''}
-					text={`Page ${currentPage + 1}`}
-				/>
-			</nav>
+			<div className="flex justify-between">
+				<Link
+					href={`/posts/pages/${currentPage - 1}`}
+					className={cn(
+						buttonVariants({ variant: 'ghost' }),
+						!prevPage && 'pointer-events-none opacity-50',
+					)}
+				>
+					이전
+				</Link>
+				<div>{currentPage}</div>
+				<Link
+					href={`/posts/pages/${currentPage + 1}`}
+					className={cn(
+						buttonVariants({ variant: 'ghost' }),
+						!nextPage && 'pointer-events-none opacity-50',
+					)}
+				>
+					다음
+				</Link>
+			</div>
 		</section>
 	)
 }
