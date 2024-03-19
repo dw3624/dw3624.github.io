@@ -6,6 +6,9 @@
   "organizeImports": {
     "enabled": true
   },
+  "formatter": {
+    "indentStyle": "space"
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
