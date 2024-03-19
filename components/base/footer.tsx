@@ -15,7 +15,7 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer className="container max-w-5xl">
+    <footer className="container max-w-3xl">
       <div className="flex justify-between items-end font-sm py-6">
         <Link href="https://github.com/dw3624" target="_blank">
           <span className="inline-flex items-center justify-center text-sm text-muted-foreground hover:underline">

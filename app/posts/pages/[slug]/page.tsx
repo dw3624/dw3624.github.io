@@ -1,9 +1,11 @@
 import React from 'react'
 
-import { NavButton } from '@/components/ui/nav-button'
+import { buttonVariants } from '@/components/ui/button'
 import PostCard from '@/components/ui/post-card'
 import { MAX_POST_NUM } from '@/lib/config'
 import { getPostList, getPostNum } from '@/lib/post'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 export const generateStaticParams = () => {
   const postNum = getPostNum()
@@ -23,7 +25,7 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
     <section className="flex flex-col justify-between h-full">
       <div>
         <header>
-          <h1 className="text-4xl font-bold">Posts</h1>
+          <h1 className="text-4xl font-bold">{currentPage}</h1>
         </header>
         <div className="py-6">
           {posts
@@ -33,7 +35,28 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
             ))}
         </div>
       </div>
-      <nav className="w-full flex flex-col gap-2 mt-6 mx-auto 3xl:flex-row">
+      <nav className="flex justify-between items-center">
+        <Link
+          href={`/posts/pages/${currentPage - 1}`}
+          className={cn(
+            buttonVariants({ variant: 'ghost' }),
+            !prevPage && 'pointer-events-none opacity-50',
+          )}
+        >
+          Previous
+        </Link>
+        <div>{currentPage}</div>
+        <Link
+          href={`/posts/pages/${currentPage + 1}`}
+          className={cn(
+            buttonVariants({ variant: 'ghost' }),
+            !nextPage && 'pointer-events-none opacity-50',
+          )}
+        >
+          Next
+        </Link>
+      </nav>
+      {/* <nav className="w-full flex flex-col gap-2 md:flex-row">
         <NavButton
           variant="prev"
           slug={prevPage ? `/posts/pages/${currentPage - 1}` : ''}
@@ -44,7 +67,7 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
           slug={nextPage ? `/posts/pages/${currentPage + 1}` : ''}
           text={`Page ${currentPage + 1}`}
         />
-      </nav>
+      </nav> */}
     </section>
   )
 }

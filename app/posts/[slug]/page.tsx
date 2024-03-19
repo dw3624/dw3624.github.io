@@ -44,14 +44,14 @@ const PostSlugPage = async ({
     <section className="flex flex-col gap-8 h-full justify-between">
       <article>
         <header>
-          <time className="text-sm font-bold text-muted-foreground font-mono">
+          <time className="block mb-4 text-sm text-muted-foreground font-mono">
             {date}
           </time>
-          <h1 className="mt-2 text-3xl md:text-4xl font-bold lg:text-5xl">
+          <h1 className="text-3xl md:text-4xl font-bold">
             {frontMatter.title}
           </h1>
           {post.frontMatter.description && (
-            <p className="mt-2 text-foreground/80">
+            <p className="mt-2 text-muted-foreground">
               {post.frontMatter.description}
             </p>
           )}

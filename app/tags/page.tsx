@@ -9,10 +9,9 @@ const PostsPage = () => {
   return (
     <section>
       <header>
-        <h1 className="text-3xl md:text-4xl font-bold">Tags</h1>
+        <h1 className="text-4xl font-bold">Tags</h1>
       </header>
-      <hr className="mt-6 mb-6 md:mb-8" />
-      <div className="flex flex-wrap gap-2">
+      <div className="py-6 flex flex-wrap gap-2">
         {tags.map((tag: { name: string; count: number }, i: number) => (
           <Link
             key={i}

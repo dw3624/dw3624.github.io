@@ -25,7 +25,7 @@ const PostCard = ({ post }: PostCardType) => {
       </Link>
       {post.frontMatter.description && (
         <Link href={`/posts/${post.slug}`}>
-          <p className="text-sm text-foreground/80 break-keep leading-6">
+          <p className="text-sm text-muted-foreground break-keep leading-6">
             {post.frontMatter.description}
           </p>
         </Link>

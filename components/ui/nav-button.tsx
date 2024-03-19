@@ -14,7 +14,10 @@ export const NavButton = ({ variant, slug, text }: NavButtonType) => {
     return (
       <Link
         href={slug || '#'}
-        className="flex flex-1 gap-4 items-center p-4 text-sm text-muted-foreground border hover:text-primary border-primary/20"
+        className="
+        flex flex-1 gap-4 items-center p-4 text-sm text-muted-foreground border
+        hover:text-primary hover:border-primary/20
+        "
       >
         {variant === 'prev' && <ChevronLeft size={20} />}
         <div
