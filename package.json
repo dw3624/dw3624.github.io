@@ -12,7 +12,7 @@
     "biome:check": "biome check --apply .",
     "biome:check:fix": "biome check --apply-unsafe .",
     "format": "npm run biome:check:fix && npm run lint:style:fix",
-    "deploy": "next build && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy\" && git push origin :gh-pages && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@next/third-parties": "^14.1.3",
