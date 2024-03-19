@@ -3,9 +3,9 @@ import * as React from 'react'
 import Footer from '@/components/base/footer'
 import Header from '@/components/base/header'
 import { ThemeProvider } from '@/components/base/theme-provider'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -41,6 +41,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-Y3D2NTMQYN" />
     </html>
   )
 }
