@@ -25,8 +25,7 @@ const PostsPage = ({ params }: { params: { slug: string } }) => {
 				<header>
 					<h1 className="text-3xl md:text-4xl font-bold">Posts</h1>
 				</header>
-				<hr className="mt-6 mb-6 md:mb-8" />
-				<div className="grid gap-6 md:gap-8 flex-1">
+				<div className="py-6">
 					{posts
 						.slice(MAX_POST_NUM * (currentPage - 1), MAX_POST_NUM * currentPage)
 						.map((post, i) => (

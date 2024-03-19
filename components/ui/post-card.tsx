@@ -14,23 +14,23 @@ const PostCard = ({ post }: PostCardType) => {
 	const date = formatDate(post.frontMatter.date)
 
 	return (
-		<article className="flex flex-col gap-2">
-			<div className="space-y-1">
-				<h3 className="text-lg md:text-xl font-semibold tracking-tight text-foreground">
-					<Link
-						href={`/posts/${post.slug}`}
-						className="transition-colors hover:text-primary/80"
-					>
-						{post.frontMatter.title}
-					</Link>
+		<article className="py-5 flex flex-col space-y-1">
+			<Link
+				href={`/posts/${post.slug}`}
+				className="transition-colors text-foreground hover:text-primary/80"
+			>
+				<h3 className="text-lg md:text-xl font-semibold tracking-tight">
+					{post.frontMatter.title}
 				</h3>
-				{post.frontMatter.description && (
-					<p className="text-sm md:text-base text-foreground/80">
+			</Link>
+			{post.frontMatter.description && (
+				<Link href={`/posts/${post.slug}`}>
+					<p className="text-sm text-foreground/80 break-keep leading-6">
 						{post.frontMatter.description}
 					</p>
-				)}
-			</div>
-			<time className="text-sm font-bold text-muted-foreground font-mono">
+				</Link>
+			)}
+			<time className="pt-1 text-xs text-muted-foreground font-mono">
 				{date}
 			</time>
 		</article>
