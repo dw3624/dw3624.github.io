@@ -6,8 +6,8 @@ tags:
   - SvelteKit
   - FastAPI
   - AWS
-  - Github Actions
-  - Cloudflare Pages
+  - GithubActions
+  - CloudflarePages
 published: true
 ---
 
